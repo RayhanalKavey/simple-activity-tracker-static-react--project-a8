@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import myLogo from "../../my_logo.png";
 import Activity from "../Activity.js/Activity";
+import ActivityCart from "../ActivityCart/ActivityCart";
 import "./ActivityArea.css";
 const ActivityArea = () => {
   const [activities, setActivities] = useState([]);
@@ -26,7 +27,9 @@ const ActivityArea = () => {
         </div>
       </div>
       {/* Left side activities cart  */}
-      <div className="bg-blue-200 col-span-1">activities cart</div>
+      <div className="col-span-1">
+        <ActivityCart></ActivityCart>
+      </div>
     </div>
   );
 };
