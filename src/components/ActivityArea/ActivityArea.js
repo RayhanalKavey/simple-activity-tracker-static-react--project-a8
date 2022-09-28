@@ -12,9 +12,9 @@ const ActivityArea = () => {
   }, []);
   // console.log(activities);
   return (
-    <div className="grid grid-cols-4">
+    <div className="grid lg:grid-cols-3 xl:grid-cols-4">
       {/* Left side activities section */}
-      <div className="bg-[#f4ead3da] col-span-3  p-16">
+      <div className="bg-[#f4ead3da] lg:col-span-2 xl:col-span-3  p-16">
         <div className="flex gap-5 items-center">
           <img className="w-14  " src={myLogo} alt="" />
           <h1 className="text-3xl py-5">Activity Tracker</h1>

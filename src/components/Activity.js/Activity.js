@@ -1,5 +1,7 @@
-import { Declaration } from "postcss";
 import React from "react";
+import { Declaration } from "postcss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import "./Activity.css";
 const Activity = ({ activity }) => {
   // console.log(activity);
@@ -15,7 +17,9 @@ const Activity = ({ activity }) => {
           <span className=" font-bold">Required Time: </span>
           {req_time}s
         </p>
-        <button className="btn btn-primary">Add to list</button>
+        <button className="btn btn-primary">
+          Add to list <FontAwesomeIcon icon={faShoppingCart} />
+        </button>
       </div>
       <figure>
         <img className="h-62 lg:h-44 w-full" src={img} alt="activity" />

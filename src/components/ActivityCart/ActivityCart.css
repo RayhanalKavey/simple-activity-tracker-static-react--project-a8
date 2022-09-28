@@ -1,0 +1,14 @@
+.add-break button {
+  background-color: aliceblue;
+  padding: 6px;
+  display: inline-block;
+  border-radius: 50%;
+}
+.add-break button:hover {
+  background-color: #eed089da;
+  transition: 500ms;
+}
+.add-break button:active {
+  transition: 500ms;
+  background-color: #a58231da;
+}
