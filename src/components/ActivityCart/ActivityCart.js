@@ -27,8 +27,6 @@ const ActivityCart = ({ cart, activities }) => {
   let totalExerciseTime = 0;
   for (const activity of cart) {
     totalExerciseTime = totalExerciseTime + activity.req_time;
-    console.log(activity.req_time);
-    console.log(totalExerciseTime);
   }
   // Break btn
   const breakBtn = (time) => {

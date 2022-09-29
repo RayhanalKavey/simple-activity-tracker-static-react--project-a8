@@ -1,45 +1,39 @@
 [
   {
     "id": "63349065b57091c620d0ff12",
-    "name": "Playing Tennis",
-    "description": "Tennis is a racket sport that is played either individually against a single opponent (singles) or between two teams of two players each (doubles).",
-    "req_time": 29,
-    "img": "https://i.ibb.co/j8Rtt8T/tennis.jpg"
+    "name": "Netting",
+    "req_time": 290,
+    "img": "https://i.ibb.co/w4msP7C/netting.jpg"
   },
   {
     "id": "633490657c9fe942bdff2485",
-    "name": "Running",
-    "description": "Running is a method of terrestrial locomotion allowing humans and other animals to move rapidly on foot.",
-    "req_time": 37,
-    "img": "https://i.ibb.co/jvb22jF/running.jpg"
+    "name": "Smash",
+    "req_time": 370,
+    "img": "https://i.ibb.co/SPDW39x/smash.jpg"
   },
   {
     "id": "63349065672ab7fbde30c603",
-    "name": "Boxing",
-    "description": "Boxing is a combat sport in which two people, usually wearing protective gloves and other protective equipment.",
-    "req_time": 40,
-    "img": "https://i.ibb.co/chvbKBH/boxing.jpg"
+    "name": "Serving",
+    "req_time": 400,
+    "img": "https://i.ibb.co/mXgjNDJ/serve.jpg"
   },
 
   {
     "id": "63349065829f4fe636736480",
-    "name": "Swimming",
-    "description": "Swimming is an individual or team racing sport that requires the use of one's entire body to move through water. ",
-    "req_time": 34,
-    "img": "https://i.ibb.co/vPHrps4/swimming.jpg"
+    "name": "Foot Strike",
+    "req_time": 340,
+    "img": "https://i.ibb.co/wBQ9wn9/muktasim-azlan-p-Pf-OLOK0oe-I-unsplash.jpg"
   },
   {
     "id": "633490651574274d1f9fb51f",
-    "name": "Fencing",
-    "description": "Fencing is a group of three related combat sports.",
-    "req_time": 21,
-    "img": "https://i.ibb.co/hVHDf7k/fencing.jpg"
+    "name": "Wrist Work",
+    "req_time": 210,
+    "img": "https://i.ibb.co/T2wKPdL/istockphoto-1317812778-612x612.jpg"
   },
   {
     "id": "63349065e041c191760275d4",
-    "name": "Harding Murphy",
-    "description": "Cycling can help to protect you from serious diseases such as stroke, heart attack, some cancers, depression, diabetes, obesity and arthritis.",
-    "req_time": 24,
-    "img": "https://i.ibb.co/cymd8RV/cycling.jpg"
+    "name": "Step Practice",
+    "req_time": 240,
+    "img": "https://i.ibb.co/YPLmS07/steps.jpg"
   }
 ]
