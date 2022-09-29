@@ -39,7 +39,7 @@ const ActivityArea = () => {
       </div>
       {/* Left side activities cart  */}
       <div className="col-span-1 sticky top-0">
-        <ActivityCart cart={cart}></ActivityCart>
+        <ActivityCart cart={cart} activities={activities}></ActivityCart>
       </div>
     </div>
   );

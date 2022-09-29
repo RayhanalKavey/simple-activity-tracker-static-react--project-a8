@@ -3,8 +3,19 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import my_img from "../../img/rayhan-al-kavey.png";
 import "./ActivityCart.css";
-const ActivityCart = ({ cart }) => {
+import {
+  addToLocalStorage,
+  getLocalStorageValue,
+} from "../../utilities/fakeBd";
+const ActivityCart = ({ cart, activities }) => {
   const [breakTime, setBreakTime] = useState(0);
+  ///get from local storage
+  useEffect(() => {
+    const getLastValue = JSON.parse(getLocalStorageValue());
+    if (getLastValue) {
+      setBreakTime(getLastValue);
+    }
+  }, [activities]);
   let totalExerciseTime = 0;
   for (const activity of cart) {
     totalExerciseTime = totalExerciseTime + activity.req_time;
@@ -14,6 +25,7 @@ const ActivityCart = ({ cart }) => {
   // Break btn
   const breakBtn = (time) => {
     setBreakTime(time);
+    addToLocalStorage(time);
   };
   // console.log(time);
   return (
