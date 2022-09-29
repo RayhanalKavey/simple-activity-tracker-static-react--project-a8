@@ -11,24 +11,21 @@ const ActivityArea = () => {
       .then((res) => res.json())
       .then((data) => setActivities(data));
   }, []);
-  // console.log(activities);
   // Activity button handler
-  // workinG
+
   const activityHandleBtn = (selectedActivity) => {
     let selectedActivityList;
-    const existActivity = cart.find(
-      (activity) => activity.id === selectedActivity.id
-    );
-    // workinG
-    if (!existActivity) {
-      selectedActivityList = [...cart, selectedActivity];
-    } else {
-      const rest = cart.filter((activity) => activity.id !== existActivity.id);
-      selectedActivity.req_time =
-        selectedActivity.req_time + selectedActivity.req_time;
-      selectedActivityList = [...rest, selectedActivity];
-    }
-    console.log(selectedActivityList);
+    // const existActivity = cart.find(
+    //   (activity) => activity.id === selectedActivity.id
+    // );
+    selectedActivityList = [...cart, selectedActivity];
+    // if (existActivity) {
+    //   selectedActivityList = [...cart, selectedActivity];
+    // } else {
+
+    //   selectedActivityList = [...cart, selectedActivity];
+    // }
+    // console.log(selectedActivityList);
     setCart(selectedActivityList);
   };
   return (
@@ -51,8 +48,8 @@ const ActivityArea = () => {
         </div>
       </div>
       {/* Left side activities cart  */}
-      <div className="col-span-1">
-        <ActivityCart></ActivityCart>
+      <div className="col-span-1 sticky top-0">
+        <ActivityCart cart={cart}></ActivityCart>
       </div>
     </div>
   );

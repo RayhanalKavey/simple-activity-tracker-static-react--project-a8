@@ -1,11 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import my_img from "../../img/rayhan-al-kavey.png";
 import "./ActivityCart.css";
-const ActivityCart = () => {
+const ActivityCart = ({ cart }) => {
+  // console.log(cart); // console.log(typeof cart.req_time);
+  let totalExerciseTime = 0;
+  for (const activity of cart) {
+    totalExerciseTime = totalExerciseTime + activity.req_time;
+    console.log(activity.req_time);
+    console.log(totalExerciseTime);
+  }
+  // if (totalExerciseTime) {
+  //   totalExerciseTime = totalExerciseTime + cart.req_time;
+  // }
+  // console.log(totalExerciseTime);
   return (
-    <div>
+    <div className="sticky top-0">
       <div className="flex gap-5 items-center m-6">
         <img className="w-16" src={my_img} alt="" />
         <div>
@@ -46,11 +57,13 @@ const ActivityCart = () => {
       </div>
       <div className="ml-7 mt-[70px]">Activity Details</div>
       <div className="add-break flex items-center gap-6 justify-between bg-[#f4ead3da] m-6 p-4 rounded-lg	text-center">
-        <div>Exercise Time:</div>
-        <div className=" text-slate-400">2000s</div>
+        <div>Exercise Time: </div>
+        <div>
+          <span className=" text-slate-400">{totalExerciseTime}s</span>
+        </div>
       </div>
       <div className="add-break flex items-center gap-6 justify-between bg-[#f4ead3da] m-6 p-4 rounded-lg	text-center">
-        <div>Exercise Time:</div>
+        <div>Break Time:</div>
         <div className=" text-slate-400">2000s</div>
       </div>
       <button className="btn btn-primary w-[93%] lg:w-[88%] mx-6 mb-6">
