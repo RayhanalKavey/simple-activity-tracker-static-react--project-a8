@@ -29,7 +29,7 @@ const ActivityArea = () => {
           <h1 className="text-3xl py-5">Activity Tracker</h1>
         </div>
         <p className="pl-[50px] text-2xl m-5 ">Select todays activity</p>
-        <div className="grid lg:grid-cols-2 xl:grid-cols-3 justify-items-center gap-9  pb-6">
+        <div className="grid grid-cols-1  lg:grid-cols-1 xl:grid-cols-3 justify-items-center gap-9  pb-6">
           {activities.map((activity) => (
             <Activity
               activity={activity}
@@ -38,13 +38,13 @@ const ActivityArea = () => {
             ></Activity>
           ))}
         </div>
-        {/* blog */}
+        {/* blog Qna */}
         <div className="lg:col-span-3 xl:col-span-4 mt-20 ">
           <Qna></Qna>
         </div>
       </div>
       {/* Left side activities cart  */}
-      <div className="col-span-1 sticky top-0">
+      <div className="col-span-1  ">
         <ActivityCart cart={cart} activities={activities}></ActivityCart>
       </div>
     </div>

@@ -4,13 +4,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import "./Activity.css";
 const Activity = ({ activity, activityHandleBtn }) => {
-  // console.log(activity);
-  const { id, name, description, img, req_time } = activity;
+  const { name, description, img, req_time } = activity;
   return (
-    <div className="card w-full md:w-[80%] lg:w-72 bg-base-100 shadow-2xl">
+    <div className="card w-full md:w-[80%] xl:w-72 bg-base-100 shadow-2xl">
       <div className="card-body p-4">
         <h2 className="card-title">{name}</h2>
-        <p>ID: {id}</p>
         <p>
           {Declaration.length <= 20 ? description : description.slice(0, 20)}
         </p>
@@ -22,7 +20,7 @@ const Activity = ({ activity, activityHandleBtn }) => {
           onClick={() => activityHandleBtn(activity)}
           className="btn btn-primary"
         >
-          Add to list <FontAwesomeIcon icon={faShoppingCart} />
+          Add to list <FontAwesomeIcon className="ml-3" icon={faShoppingCart} />
         </button>
       </div>
       <figure>

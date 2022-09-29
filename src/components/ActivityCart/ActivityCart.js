@@ -35,9 +35,9 @@ const ActivityCart = ({ cart, activities }) => {
     setBreakTime(time);
     addToLocalStorage(time);
   };
-  // console.log(time);
+
   return (
-    <div className="sticky top-0">
+    <div className="sticky top-0 pt-2 mb-6">
       <div className="flex gap-5 items-center m-6">
         <img className="w-16" src={my_img} alt="" />
         <div>
@@ -85,13 +85,13 @@ const ActivityCart = ({ cart, activities }) => {
         <div>Break Time:</div>
         <div className=" text-slate-400">{breakTime}s</div>
       </div>
-      <button
-        onClick={notify}
-        className="btn btn-primary w-[93%] lg:w-[88%] mx-6 mb-6"
-      >
-        Activity Completed
-      </button>
-      <ToastContainer />
+      <div className=" mx-6 ">
+        {" "}
+        <button onClick={notify} className="btn btn-primary w-full ">
+          Activity Completed
+        </button>
+        <ToastContainer />
+      </div>
     </div>
   );
 };
