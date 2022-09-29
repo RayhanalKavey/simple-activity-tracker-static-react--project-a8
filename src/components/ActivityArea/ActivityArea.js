@@ -15,17 +15,7 @@ const ActivityArea = () => {
 
   const activityHandleBtn = (selectedActivity) => {
     let selectedActivityList;
-    // const existActivity = cart.find(
-    //   (activity) => activity.id === selectedActivity.id
-    // );
     selectedActivityList = [...cart, selectedActivity];
-    // if (existActivity) {
-    //   selectedActivityList = [...cart, selectedActivity];
-    // } else {
-
-    //   selectedActivityList = [...cart, selectedActivity];
-    // }
-    // console.log(selectedActivityList);
     setCart(selectedActivityList);
   };
   return (

@@ -1,20 +1,21 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import my_img from "../../img/rayhan-al-kavey.png";
 import "./ActivityCart.css";
 const ActivityCart = ({ cart }) => {
-  // console.log(cart); // console.log(typeof cart.req_time);
+  const [breakTime, setBreakTime] = useState(0);
   let totalExerciseTime = 0;
   for (const activity of cart) {
     totalExerciseTime = totalExerciseTime + activity.req_time;
     console.log(activity.req_time);
     console.log(totalExerciseTime);
   }
-  // if (totalExerciseTime) {
-  //   totalExerciseTime = totalExerciseTime + cart.req_time;
-  // }
-  // console.log(totalExerciseTime);
+  // Break btn
+  const breakBtn = (time) => {
+    setBreakTime(time);
+  };
+  // console.log(time);
   return (
     <div className="sticky top-0">
       <div className="flex gap-5 items-center m-6">
@@ -49,22 +50,20 @@ const ActivityCart = ({ cart }) => {
       </div>
       <div className="ml-7 mt-[50px]">Add Breaks in Activity</div>
       <div className="add-break flex items-center gap-6 justify-center bg-[#f4ead3da] m-6 py-4 rounded-lg	text-center ">
-        <button>10s</button>
-        <button>20s</button>
-        <button>30s</button>
-        <button>40s</button>
-        <button>50s</button>
+        <button onClick={() => breakBtn(10)}>10s</button>
+        <button onClick={() => breakBtn(20)}>20s</button>
+        <button onClick={() => breakBtn(30)}>30s</button>
+        <button onClick={() => breakBtn(40)}>40s</button>
+        <button onClick={() => breakBtn(50)}>50s</button>
       </div>
       <div className="ml-7 mt-[70px]">Activity Details</div>
       <div className="add-break flex items-center gap-6 justify-between bg-[#f4ead3da] m-6 p-4 rounded-lg	text-center">
         <div>Exercise Time: </div>
-        <div>
-          <span className=" text-slate-400">{totalExerciseTime}s</span>
-        </div>
+        <div className=" text-slate-400">{totalExerciseTime}s</div>
       </div>
       <div className="add-break flex items-center gap-6 justify-between bg-[#f4ead3da] m-6 p-4 rounded-lg	text-center">
         <div>Break Time:</div>
-        <div className=" text-slate-400">2000s</div>
+        <div className=" text-slate-400">{breakTime}s</div>
       </div>
       <button className="btn btn-primary w-[93%] lg:w-[88%] mx-6 mb-6">
         Activity Completed
