@@ -5,12 +5,32 @@ import ActivityCart from "../ActivityCart/ActivityCart";
 import "./ActivityArea.css";
 const ActivityArea = () => {
   const [activities, setActivities] = useState([]);
+  const [cart, setCart] = useState([]);
   useEffect(() => {
     fetch("data.json")
       .then((res) => res.json())
       .then((data) => setActivities(data));
   }, []);
   // console.log(activities);
+  // Activity button handler
+  // workinG
+  const activityHandleBtn = (selectedActivity) => {
+    let selectedActivityList;
+    const existActivity = cart.find(
+      (activity) => activity.id === selectedActivity.id
+    );
+    // workinG
+    if (!existActivity) {
+      selectedActivityList = [...cart, selectedActivity];
+    } else {
+      const rest = cart.filter((activity) => activity.id !== existActivity.id);
+      selectedActivity.req_time =
+        selectedActivity.req_time + selectedActivity.req_time;
+      selectedActivityList = [...rest, selectedActivity];
+    }
+    console.log(selectedActivityList);
+    setCart(selectedActivityList);
+  };
   return (
     <div className="grid lg:grid-cols-3 xl:grid-cols-4">
       {/* Left side activities section */}
@@ -22,7 +42,11 @@ const ActivityArea = () => {
         <p className="pl-[50px] text-2xl m-5 ">Select todays activity</p>
         <div className="grid lg:grid-cols-2 xl:grid-cols-3 justify-items-center gap-9  pb-6">
           {activities.map((activity) => (
-            <Activity activity={activity} key={activity.id}></Activity>
+            <Activity
+              activity={activity}
+              key={activity.id}
+              activityHandleBtn={activityHandleBtn}
+            ></Activity>
           ))}
         </div>
       </div>

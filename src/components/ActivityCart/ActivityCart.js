@@ -1,9 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faLocationDot,
-  faShoppingCart,
-} from "@fortawesome/free-solid-svg-icons";
+import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import my_img from "../../img/rayhan-al-kavey.png";
 import "./ActivityCart.css";
 const ActivityCart = () => {
@@ -57,7 +54,7 @@ const ActivityCart = () => {
         <div className=" text-slate-400">2000s</div>
       </div>
       <button className="btn btn-primary w-[93%] lg:w-[88%] mx-6 mb-6">
-        Add to list
+        Activity Completed
       </button>
     </div>
   );
