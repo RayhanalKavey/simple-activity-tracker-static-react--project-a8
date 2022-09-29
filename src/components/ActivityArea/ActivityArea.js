@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import myLogo from "../../my_logo.png";
 import Activity from "../Activity.js/Activity";
 import ActivityCart from "../ActivityCart/ActivityCart";
+import Qna from "../Qna/Qna";
+
 import "./ActivityArea.css";
 const ActivityArea = () => {
   const [activities, setActivities] = useState([]);
@@ -35,6 +37,10 @@ const ActivityArea = () => {
               activityHandleBtn={activityHandleBtn}
             ></Activity>
           ))}
+        </div>
+        {/* blog */}
+        <div className="lg:col-span-3 xl:col-span-4 mt-20 ">
+          <Qna></Qna>
         </div>
       </div>
       {/* Left side activities cart  */}

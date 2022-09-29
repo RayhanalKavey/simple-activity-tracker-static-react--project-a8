@@ -7,7 +7,15 @@ import {
   addToLocalStorage,
   getLocalStorageValue,
 } from "../../utilities/fakeBd";
+//toast impost
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 const ActivityCart = ({ cart, activities }) => {
+  const notify = () =>
+    toast("Congratulations! You are done with your activity.", {
+      position: toast.POSITION.TOP_CENTER,
+    });
   const [breakTime, setBreakTime] = useState(0);
   ///get from local storage
   useEffect(() => {
@@ -55,7 +63,7 @@ const ActivityCart = ({ cart, activities }) => {
         </div>
         <div>
           <div>
-            25<span className="font-[200] text-slate-400">yrs</span>
+            30<span className="font-[200] text-slate-400">yrs</span>
           </div>
           <div>Age</div>
         </div>
@@ -77,9 +85,13 @@ const ActivityCart = ({ cart, activities }) => {
         <div>Break Time:</div>
         <div className=" text-slate-400">{breakTime}s</div>
       </div>
-      <button className="btn btn-primary w-[93%] lg:w-[88%] mx-6 mb-6">
+      <button
+        onClick={notify}
+        className="btn btn-primary w-[93%] lg:w-[88%] mx-6 mb-6"
+      >
         Activity Completed
       </button>
+      <ToastContainer />
     </div>
   );
 };
